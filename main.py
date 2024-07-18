@@ -8,20 +8,17 @@ import face_recognition
 video_capture = cv2.VideoCapture(0)
 
 #Load known faces
-user1_image = face_recognition.load_image_file("faces/user1.jpg")
+user1_image = face_recognition.load_image_file("faces/Pratyul.jpg")
 user1_encoding = face_recognition.face_encodings(user1_image)[0]
 
-user2_image = face_recognition.load_image_file("faces/user2.jpg")
+user2_image = face_recognition.load_image_file("faces/PM.jpg")
 user2_encoding = face_recognition.face_encodings(user2_image)[0]
 
-ayashkant_image = face_recognition.load_image_file("faces/ayashkant.jpg")
+user3_image = face_recognition.load_image_file("faces/Souhardya_Sir.jpg")
 user3_encoding = face_recognition.face_encodings(ayashkant_image)[0]
 
-sir_image = face_recognition.load_image_file("faces/sir.jpg")
-user4_encoding = face_recognition.face_encodings(sir_image)[0]
-
-known_face_encodings = [user1_encoding, user2_encoding, user3_encoding, user4_encoding]
-known_face_names = ["User1", "User2", "ayashkant", "sir"]
+known_face_encodings = [user1_encoding, user2_encoding, user3_encoding]
+known_face_names = ["Pratyul", "PM", "Souhardya_Sir"]
 
 #list of expected users
 users = known_face_names.copy()
