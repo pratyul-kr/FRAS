@@ -8,17 +8,17 @@ import face_recognition
 video_capture = cv2.VideoCapture(0)
 
 #Load known faces
-user1_image = face_recognition.load_image_file("faces/Pratyul.jpg")
+user1_image = face_recognition.load_image_file("faces/user1.jpg")
 user1_encoding = face_recognition.face_encodings(user1_image)[0]
 
-user2_image = face_recognition.load_image_file("faces/PM.jpg")
+user2_image = face_recognition.load_image_file("faces/user2.jpg")
 user2_encoding = face_recognition.face_encodings(user2_image)[0]
 
-user3_image = face_recognition.load_image_file("faces/Souhardya_Sir.jpg")
-user3_encoding = face_recognition.face_encodings(ayashkant_image)[0]
+user3_image = face_recognition.load_image_file("faces/user3.jpg")
+user3_encoding = face_recognition.face_encodings(user3_image)[0]
 
 known_face_encodings = [user1_encoding, user2_encoding, user3_encoding]
-known_face_names = ["Pratyul", "PM", "Souhardya_Sir"]
+known_face_names = ["User 1", "User 2", "User 3"]
 
 #list of expected users
 users = known_face_names.copy()
@@ -27,7 +27,6 @@ face_locations = []
 face_encodings = []
 
 #get current time and date
-
 now = datetime.now()
 current_date = now.strftime("%Y-%m-%d")
 
